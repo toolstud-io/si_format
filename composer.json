@@ -1,17 +1,17 @@
 {
-    "name": "author_username/package_name",
+    "name": "toolstud-io/si_format",
     "version": "1.1.1",
-    "description": "package_description",
+    "description": "PHP package to format number according to SI standards",
     "keywords": [
-        "author_username",
-        "package_name"
+        "toolstud-io",
+        "si_format"
     ],
-    "homepage": "https://github.com/author_username/package_name",
+    "homepage": "https://github.com/toolstud-io/si_format",
     "license": "MIT",
     "authors": [
         {
-            "name": "author_name",
-            "email": "author@email.com",
+            "name": "Peter Forret",
+            "email": "peter@forret.com",
             "role": "Developer"
         }
     ],
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "package_namespace\\class_name\\": "src"
+            "ToolstudIo\\SiFormat\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "package_namespace\\class_name\\Tests\\": "tests"
+            "ToolstudIo\\SiFormat\\Tests\\": "tests"
         }
     },
     "scripts": {
