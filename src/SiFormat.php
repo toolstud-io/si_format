@@ -1,10 +1,11 @@
 <?php
+
 // Author: Peter Forret (toolstud-io, peter@forret.com)
+
 namespace ToolstudIo\SiFormat;
 
 class SiFormat
 {
-
     private array $prefixes;
     private string $unit;
     private int $base;
@@ -55,7 +56,6 @@ class SiFormat
                 7 => "Zetta",
                 8 => "Yotta",
             ];
-
         }
         printf("\n");
     }
