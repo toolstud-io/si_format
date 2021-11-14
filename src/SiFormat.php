@@ -37,25 +37,49 @@ class SiFormat
                 8 => "Y",
             ];
         } else {
-            $this->prefixes = [
-                -8 => "yocto",
-                -7 => "zepto",
-                -6 => "atto",
-                -5 => "femto",
-                -4 => "pico",
-                -3 => "nano",
-                -2 => "micro",
-                -1 => "milli",
-                0 => "",
-                1 => "Kilo",
-                2 => "Mega",
-                3 => "Giga",
-                4 => "Tera",
-                5 => "Peta",
-                6 => "Exa",
-                7 => "Zetta",
-                8 => "Yotta",
-            ];
+            if($base==1000){
+                $this->prefixes = [
+                    -8 => "yocto",
+                    -7 => "zepto",
+                    -6 => "atto",
+                    -5 => "femto",
+                    -4 => "pico",
+                    -3 => "nano",
+                    -2 => "micro",
+                    -1 => "milli",
+                    0 => "",
+                    1 => "Kilo",
+                    2 => "Mega",
+                    3 => "Giga",
+                    4 => "Tera",
+                    5 => "Peta",
+                    6 => "Exa",
+                    7 => "Zetta",
+                    8 => "Yotta",
+                ];
+
+            } else {
+                $this->prefixes = [
+                    -8 => "yocto",
+                    -7 => "zepto",
+                    -6 => "atto",
+                    -5 => "femto",
+                    -4 => "pico",
+                    -3 => "nano",
+                    -2 => "micro",
+                    -1 => "milli",
+                    0 => "",
+                    1 => "Kibi",
+                    2 => "Mibi",
+                    3 => "Gibi",
+                    4 => "Tibi",
+                    5 => "Pibi",
+                    6 => "Exibi",
+                    7 => "Zibi",
+                    8 => "Yibi",
+                ];
+
+            }
         }
         printf("\n");
     }

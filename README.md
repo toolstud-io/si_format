@@ -4,7 +4,6 @@ Github:
 ![GitHub tag](https://img.shields.io/github/v/tag/toolstud-io/si_format)
 ![Tests](https://github.com/toolstud-io/si_format/workflows/Run%20Tests/badge.svg)
 ![Psalm](https://github.com/toolstud-io/si_format/workflows/Detect%20Psalm%20warnings/badge.svg)
-![Styling](https://github.com/toolstud-io/si_format/workflows/Check%20&%20fix%20styling/badge.svg)
 
 Packagist: 
 [![Packagist Version](https://img.shields.io/packagist/v/toolstud-io/si_format.svg?style=flat-square)](https://packagist.org/packages/toolstud-io/si_format)
@@ -25,8 +24,16 @@ composer require toolstud-io/si_format
 ## Usage
 
 ``` php
-$obj = new ToolstudIo\SiFormat();
-echo $obj->echoPhrase('Hello, toolstud-io!');
+$obj = new ToolstudIo\SiFormat(false,"m");
+echo $obj->format(1000000);
+// returns "1km"
+echo $obj->format(.001);
+// returns "1mm"
+
+$obj = new ToolstudIo\SiFormat(false,"B",1024);
+echo $obj->format(1024);
+// returns "1KB"
+
 ```
 
 ## Testing

@@ -40,6 +40,14 @@ class SiFormatTest extends TestCase
         $this->assertEquals("8.88PB",$si->format(9999999999999999),"9999999999999999 bytes");
     }
 
+    public function testFormatDiskLong(): void
+    {
+        $si=new SiFormat(true,"byte",1024," ");
+        $this->assertEquals("8 Kibibyte",$si->format(8196),"8196 bytes");
+        $this->assertEquals("1.15 Gibibyte",$si->format(1234567890),"1234567890 bytes");
+        $this->assertEquals("8.88 Pibibyte",$si->format(9999999999999999),"9999999999999999 bytes");
+    }
+
     public function testFormatWeight(): void
     {
         $si=new SiFormat(false,"g");
