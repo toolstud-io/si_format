@@ -8,11 +8,13 @@ class SiFormat
     private array $prefixes;
     private string $unit;
     private int $base;
+    private string $separator;
 
-    public function __construct(bool $long = false, string $unit = "m", int $base = 1000)
+    public function __construct(bool $long = false, string $unit = "m", int $base = 1000, string $separator="")
     {
         $this->unit = $unit;
         $this->base = $base;
+        $this->separator=$separator;
         if (!$long) {
             $this->prefixes = [
                 -8 => "y",
@@ -82,10 +84,10 @@ class SiFormat
 
         if ($power === 0) {
             $formatted = round($number, $places);
-            $formatted .= $this->unit;
+            $formatted .= $this->separator . $this->unit;
         } else {
             $formatted = round($number / ($this->base ** $power), $places);
-            $formatted .= $this->prefixes[$power] . $this->unit;
+            $formatted .= $this->separator . $this->prefixes[$power] . $this->unit;
         }
 
         if ($negative) {

@@ -19,6 +19,18 @@ class SiFormatTest extends TestCase
         $this->assertEquals("0.81nm",$si->format(1/1234567890),".5 millimeter");
     }
 
+    public function testFormatLong(): void
+    {
+        $si=new SiFormat(true,"meter",1000," ");
+        $this->assertEquals("1 meter",$si->format(1),"1");
+        $this->assertEquals("0.1 meter",$si->format(.1),"1");
+        $this->assertEquals("10 millimeter",$si->format(.01),"1");
+        $this->assertEquals("1 millimeter",$si->format(.001),"1");
+        $this->assertEquals("1 Kilometer",$si->format(1000),"1 kilometer");
+        $this->assertEquals("0.5 millimeter",$si->format(.0005),".5 millimeter");
+        $this->assertEquals("0.81 nanometer",$si->format(1/1234567890),".5 millimeter");
+    }
+
     public function testFormatDisk(): void
     {
         $si=new SiFormat(false,"B",1024);
