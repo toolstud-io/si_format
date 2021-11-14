@@ -1,6 +1,6 @@
 {
     "name": "toolstud-io/si_format",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "PHP package to format number according to SI standards",
     "keywords": [
         "toolstud-io",
