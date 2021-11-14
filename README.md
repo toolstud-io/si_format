@@ -9,9 +9,7 @@ Packagist:
 [![Packagist Version](https://img.shields.io/packagist/v/toolstud-io/si_format.svg?style=flat-square)](https://packagist.org/packages/toolstud-io/si_format)
 [![Packagist Downloads](https://img.shields.io/packagist/dt/toolstud-io/si_format.svg?style=flat-square)](https://packagist.org/packages/toolstud-io/si_format)
 
-PHP package to format number according to SI standards
-
-	created on 2021-11-13 by peter@forret.com
+PHP package to format numbers according to SI standards (milli, micro, nano... / Kilo, Mega, Giga...)
 
 ## Installation
 
