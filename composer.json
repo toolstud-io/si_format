@@ -1,6 +1,6 @@
 {
     "name": "toolstud-io/si_format",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "PHP package to format numbers according to SI standards (milli, micro, nano... / Kilo, Mega, Giga...)",
     "keywords": [
         "toolstud-io",
